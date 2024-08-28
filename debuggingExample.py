@@ -1,3 +1,5 @@
+# This is an ETL pipeline that extensively uses logging for efficient debugging
+
 import logging
 import pandas as pd
 import matplotlib.pyplot as plt
