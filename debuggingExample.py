@@ -1,5 +1,5 @@
 # This is an ETL pipeline that extensively uses logging for efficient debugging
-# This is just a change to test with pull request
+# Removing this in the development branch
 
 import logging
 import pandas as pd
