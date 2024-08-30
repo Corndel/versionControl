@@ -1,6 +1,6 @@
 # This is an ETL pipeline that extensively uses logging for efficient debugging
 # Adding this to remote master
-# Git stash command test
+# Git stash command test and pull
 
 import logging
 import pandas as pd
