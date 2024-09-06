@@ -27,13 +27,13 @@ def transform_data(data):
     logging.info("Generating the plots started...")
     plt.figure()
     plt.scatter(data['Age'], data['Salary_GBP'], marker='o', color='r')
-    dfi.export(description,"../destination/data_description.png")
-    dfi.export(data.corr(),"../destination/correlation_matrix.png")
+    dfi.export(description,r"C:\Users\WakilSarfaraz\OneDrive - Corndel Ltd\DEContentCreation\DE5-0701\debuggingExample\destination\data_description.png")
+    dfi.export(data.corr(),r"C:\Users\WakilSarfaraz\OneDrive - Corndel Ltd\DEContentCreation\DE5-0701\debuggingExample\destination\correlation_matrix.png")
     plt.title(f'Scatter Plot for Age vs Salary', fontsize=15)
     plt.xlabel('Age',fontsize=12)
     plt.ylabel('Annual Salary (GBP)', fontsize=12)
     plt.grid(True)
-    plt.savefig('../destination/scatter.png')
+    plt.savefig(r"C:\Users\WakilSarfaraz\OneDrive - Corndel Ltd\DEContentCreation\DE5-0701\debuggingExample\destination\scatter.png")
     plt.close()
     # Histogram
     plt.figure()
@@ -42,7 +42,7 @@ def transform_data(data):
     plt.xlabel('Age in Months',fontsize=12)
     plt.ylabel('Frequency', fontsize=12)
     plt.grid(True)
-    plt.savefig('../destination/Age_histogram.png')
+    plt.savefig(r"C:\Users\WakilSarfaraz\OneDrive - Corndel Ltd\DEContentCreation\DE5-0701\debuggingExample\destination\Age_histogram.png")
     plt.close()
     transformed_data = data
     logging.info("Data transformed successfully, top 3 rows are:\n %s",transformed_data.head(3))
@@ -56,9 +56,9 @@ def load_data(df, filename):
 
 
 def run_pipeline():
-    data = extract_data('../source/raw_data.csv')
+    data = extract_data(r"C:\Users\WakilSarfaraz\OneDrive - Corndel Ltd\DEContentCreation\DE5-0701\debuggingExample\source\data.csv")
     transformed_data = transform_data(data)
-    load_data(transformed_data,filename='../destination/processed_data.xlsx')
+    load_data(transformed_data,filename=r"C:\Users\WakilSarfaraz\OneDrive - Corndel Ltd\DEContentCreation\DE5-0701\debuggingExample\destination\processed_data.xlsx")
 
 
 if __name__ == "__main__":
